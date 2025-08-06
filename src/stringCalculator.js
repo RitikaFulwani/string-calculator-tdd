@@ -9,7 +9,13 @@ function add(numbers) {
         numberString = numbers.substring(4);
     }
     
-    const nums = numberString.replace(/\n/g, delimiter).split(delimiter);
+    const nums = numberString.replace(/\n/g, delimiter).split(',');
+    const negatives = nums.filter(num => parseInt(num) < 0);
+    
+    if (negatives.length > 0) {
+        throw new Error(`negative numbers not allowed: ${negatives.join(',')}`);
+    }
+    
     return nums.reduce((sum, num) => sum + parseInt(num), 0);
 }
 
