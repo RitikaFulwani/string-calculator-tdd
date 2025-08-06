@@ -9,7 +9,8 @@ function add(numbers) {
         numberString = numbers.substring(4);
     }
     
-    const nums = numberString.replace(/\n/g, delimiter).split(',');
+    // Replace newlines with the actual delimiter, then split by that delimiter
+    const nums = numberString.replace(/\n/g, delimiter).split(delimiter);
     const negatives = nums.filter(num => parseInt(num) < 0);
     
     if (negatives.length > 0) {
