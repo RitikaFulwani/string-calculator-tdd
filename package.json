@@ -1,0 +1,16 @@
+{
+  "name": "string-calculator-kata",
+  "version": "1.0.0",
+  "description": "TDD Kata for String Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": ["tdd", "kata", "javascript"],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
